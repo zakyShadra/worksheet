@@ -1,0 +1,130 @@
+:root {
+    --color-primary: #2457d6;
+    --color-primary-dark: #193ca0;
+    --color-text: #172033;
+    --color-background: #f4f5f7;
+    --spacing: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 1rem/1.6 Arial, sans-serif;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+.container {
+    width: min(100% - 2rem, 1120px);
+    margin-inline: auto;
+}
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid #d9dce2;
+    padding-block: 1rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-dark);
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid #f4b000;
+    outline-offset: 3px;
+}
+
+main {
+    padding-block: 2rem;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.card {
+    background: white;
+    border: 1px solid #d9dce2;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    color: white;
+    background: var(--color-primary);
+    border-radius: .5rem;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--color-primary-dark);
+}
+
+.button:focus-visible {
+    outline: 3px solid #f4b000;
+    outline-offset: 3px;
+}
+
+.site-footer {
+    text-align: center;
+    padding-block: 1.5rem;
+    color: #555;
+}
+
+@media (min-width: 768px) {
+    .nav-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-list {
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1;
+    }
+}
